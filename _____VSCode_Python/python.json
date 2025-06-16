@@ -1,0 +1,262 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	
+    "elif": {
+        "prefix": "elif",
+        "body": ["elif ${1:expression}:", "\t${2:pass}"],
+        "description": "Code snippet for an elif"
+    },
+    "else": {
+        "prefix": "else",
+        "body": ["else:", "\t${1:pass}"],
+        "description": "Code snippet for an else"
+    },
+    "while/else": {
+        "prefix": "while/else",
+        "body": ["while ${1:expression}:", "\t${2:pass}", "else:", "\t${3:pass}"],
+        "description": "Code snippet for a while loop with else"
+    },
+    "for/else": {
+        "prefix": "for/else",
+        "body": ["for ${1:target_list} in ${2:expression_list}:", "\t${3:pass}", "else:", "\t${4:pass}"],
+        "description": "Code snippet for a for loop with else"
+    },
+    "try/finally": {
+        "prefix": "try/finally",
+        "body": ["try:", "\t${1:pass}", "finally:", "\t${2:pass}"],
+        "description": "Code snippet for a try/finally statement"
+    },
+    "try/except/else": {
+        "prefix": "try/except/else",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "except ${2:expression} as ${3:identifier}:",
+            "\t${4:pass}",
+            "else:",
+            "\t${5:pass}"
+        ],
+        "description": "Code snippet for a try/except/else statement"
+    },
+    "try/except/finally": {
+        "prefix": "try/except/finally",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "except ${2:expression} as ${3:identifier}:",
+            "\t${4:pass}",
+            "finally:",
+            "\t${5:pass}"
+        ],
+        "description": "Code snippet for a try/except/finally statement"
+    },
+    "try/except/else/finally": {
+        "prefix": "try/except/else/finally",
+        "body": [
+            "try:",
+            "\t${1:pass}",
+            "except ${2:expression} as ${3:identifier}:",
+            "\t${4:pass}",
+            "else:",
+            "\t${5:pass}",
+            "finally:",
+            "\t${6:pass}"
+        ],
+        "description": "Code snippet for a try/except/else/finally statement"
+    },
+    "with": {
+        "prefix": "with",
+        "body": ["with ${1:expression} as ${2:target}:", "\t${3:pass}"],
+        "description": "Code snippet for a with statement"
+    },
+    "def(static class method)": {
+        "prefix": "def(static class method)",
+        "body": ["@staticmethod", "def ${1:funcname}(${2:parameter_list}):", "\t\"\"\"", "\t${3:docstring}", "\t\"\"\"", "\t${4:pass}"],
+        "description": "Code snippet for a static class method"
+    },
+    "def(abstract class method)": {
+        "prefix": "def(abstract class method)",
+        "body": ["def ${1:funcname}(self, ${2:parameter_list}):", "\t\"\"\"", "\t${3:docstring}", "\t\"\"\"", "\traise NotImplementedError"],
+        "description": "Code snippet for an abstract class method"
+    },
+    "lambda": {
+        "prefix": "lambda",
+        "body": ["lambda ${1:parameter_list}: ${2:expression}"],
+        "description": "Code snippet for a lambda statement"
+    },
+    "if(main)": {
+        "prefix": "__main__",
+        "body": ["if __name__ == \"__main__\":", "    ${1:pass}"],
+        "description": "Code snippet for a `if __name__ == \"__main__\": ...` block"
+    },
+    "async/def": {
+        "prefix": "async/def",
+        "body": ["async def ${1:funcname}(${2:parameter_list}):", "\t${3:pass}"],
+        "description": "Code snippet for an async statement"
+    },
+    "async/for": {
+        "prefix": "async/for",
+        "body": ["async for ${1:target} in ${2:iter}:", "\t${3:block}"],
+        "description": "Code snippet for an async for statement"
+    },
+    "async/for/else": {
+        "prefix": "async/for/else",
+        "body": ["async for ${1:target} in ${2:iter}:", "\t${3:block}", "else:", "\t${4:block}"],
+        "description": "Code snippet for an async for statement with else"
+    },
+    "async/with": {
+        "prefix": "async/with",
+        "body": ["async with ${1:expr} as ${2:var}:", "\t${3:block}"],
+        "description": "Code snippet for an async with statement"
+    },
+    "ipdb": {
+        "prefix": "ipdb",
+        "body": "import ipdb; ipdb.set_trace()",
+        "description": "Code snippet for ipdb debug"
+    },
+    "pdb": {
+        "prefix": "pdb",
+        "body": "import pdb; pdb.set_trace()",
+        "description": "Code snippet for pdb debug"
+    },
+    "pudb": {
+        "prefix": "pudb",
+        "body": "import pudb; pudb.set_trace()",
+        "description": "Code snippet for pudb debug"
+    },
+    "add/new/cell": {
+        "prefix": "add/new/cell",
+        "body": "# %%",
+        "description": "Code snippet to add a new cell"
+    },
+    "mark/markdown": {
+        "prefix": "mark/markdown",
+        "body": "# %% [markdown]",
+        "description": "Code snippet to add a new markdown cell"
+    },
+    // Snippets by NL, with "í" prefix
+    "main()": {
+        "prefix": "ímain()",
+        "body": ["def main() -> None:", "\t${1:pass}  # Kezd a kódolást itt!\n\n", "if __name__ == \"__main__\":", "\tmain()\n"],
+        "description": "Induló sablon main() fg. létrehozásához"
+    },
+    "class": {
+        "prefix": "íclass",
+        "body": ["class ${1:osztály_neve}(object):", "\t${2:pass}"],
+        "description": "Osztály definiálása"
+    },
+    "property": {
+        "prefix": "íproperty",
+        "body": ["@property", "def ${1:jellemző_neve}(self) -> ${2:int}:", "\treturn ${3:0}"],
+        "description": "Osztály jellemző definiálása"
+    },
+    "def(class method)": {
+        "prefix": "ídef(class metódus)",
+        "body": ["def ${1:metódus_neve}(self, ${2:p1: int, p2: int}) -> ${3:int}:", "\treturn ${4:p1 + p2}"],
+        "description": "Osztály metódus definiálása"
+    },
+    "def(__init__)": {
+        "prefix": "ídef(__init__)",
+        "body": ["def __init__(self, ${1:állomány_neve: str}) -> None:", "\t${2:pass}"],
+        "description": "Osztály konstruktor definiálása"
+    },
+    "def": {
+        "prefix": "ídef",
+        "body": ["def ${1:függvény_neve}(${2:p1: int, p2: int}) -> ${3:int}:", "\treturn ${4:p1 + p2}"],
+        "description": "Függvény definiálása"
+    },
+	"if": {
+        "prefix": "íif",
+        "body": ["if ${1:feltétel}:", "\t${2:pass}"],
+        "description": "if \"egyágú\" elágazás"
+    },
+    "if/else": {
+        "prefix": "íif/else",
+        "body": ["if ${1:feltétel}:", "\t${2:pass}", "else:", "\t${3:pass}"],
+        "description": "if/else \"kétágú\" elágazás"
+    },
+    "while": {
+        "prefix": "íwhile",
+        "body": ["while ${1:ciklus_feltétel}:", "\t${2:pass}"],
+        "description": "Elöltesztelő (while) ciklus"
+    },
+    "for": {
+        "prefix": "ífor",
+        "body": ["for ${1:cilkus_változója} in ${2:bejárandó}:", "\t${3:pass}"],
+        "description": "For ciklus"
+    },
+    "for-range()": {
+        "prefix": "ífor-range()",
+        "body": ["for ${1:cilkus_változója} in range(${2:0, 11}): # 0-10", "\t${3:pass}"],
+        "description": "For-range() ciklus"
+    },
+    "try/except": {
+        "prefix": "ítry/except",
+        "body": ["try:", "\t# védett blokk", "\t${1:pass}", "except ${2:ValueError} as ${3:ex}:", "\t${4:print(ex)}"],
+        "description": "try-except blokk"
+    },
+    "open() - olvasás": {
+        "prefix": "íopen() - olvasás",
+        "body": ["with open(\"${1:file_neve.txt}\", \"r\", encoding=\"utf-8\") as file:", "\tfor sor in file.read().splitlines()[1:]:  # [1:] - első sor kihagyása", "\t\t${2:pass}"],
+        "description": "open() - állomány olvasása"
+    },
+    "open() - írás": {
+        "prefix": "íopen() - írás",
+        "body": ["with open(\"${1:file_neve.txt}\", \"w\", encoding=\"utf-8\") as file:", "\tfile.writelines(sorok_lista)"],
+        "description": "open() - állomány írása"
+    },
+    "list": {
+        "prefix": "ílist",
+        "body": ["lista_neve: list[int] = [1, 2, 3]"],
+        "description": "Lista deklaráció"
+    },
+    "set": {
+        "prefix": "íset",
+        "body": ["halmaz_neve: set[str] = {\"Szaturnusz\", \"Vénusz\"}"],
+        "description": "Halmaz deklaráció"
+    },
+    "dict": {
+        "prefix": "ídict",
+        "body": ["szótár_neve: dict[str, int] = {\"Jenő\": 36, \"Béla\": 13}"],
+        "description": "Szótár deklaráció"
+    },
+    "print(f)": {
+        "prefix": "íprint(f)",
+        "body": ["print(f\"Példa: {${1:változó}}\", end=\"\")"],
+        "description": "print() függvény f-string-el"
+    },
+    "types": {
+        "prefix": "ítypes",
+        "body": [
+            "# adattípusok súgó:",
+            "# int -> egész típus - 18",
+            "# float -> valós (tört) típus - 20.5",
+            "# str -> szöveges típus - \"kilincs\"",
+            "# bool -> logikai típus - True, vagy False",
+            "# list -> lista típus - [\"alma\", \"körte\", \"alma\"]",
+            "# tuple -> tuple típus - (\"János\", 35, 1.75, True)",
+            "# dict -> szótár típus - {\"Jenő\": 36, \"Béla\": 13}",
+            "# set -> halmaz típus - {\"Jupiter\", \"Vénusz\"}",
+            "# példák:",
+            "# my_tuple: tuple[str, int, float, bool] = (\"János\", 35, 1.75, True)",
+            "# my_set: set[str] = {\"Jupiter\", \"Vénusz\"}",
+            "# my_dict: dict[str, int] = {\"Jenő\": 36, \"Béla\": 13}",
+            "# my_list: list[int] = [1, 2, 3, 5, 7]"
+        ],
+        "description": "Python adattípusok súgó"
+    }
+
+}

@@ -1,0 +1,36 @@
+{
+  "editor.parameterHints.enabled": true,
+  "editor.suggestSelection": "first",
+  "editor.minimap.enabled": false,
+  "editor.mouseWheelZoom": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "files.autoSave": "afterDelay",
+  "git.autofetch": true,
+  "git.autofetchPeriod": 60,
+  "git.pruneOnFetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "workbench.startupEditor": "none",
+  "python.languageServer": "Pylance",
+  "pylint.showNotifications": "onWarning",
+  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.autoImportCompletions": true,
+  "pylint.args": [
+    "--disable=missing-module-docstring",
+    "--disable=missing-class-docstring",
+    "--disable=missing-function-docstring",
+    "--disable=invalid-name",
+    "--disable=non-ascii-name",
+    "--disable=non-ascii-module-import",
+    "--disable=non-ascii-file-name",
+    "--disable=consider-using-enumerate",
+    "--disable=line-too-long",
+    "--disable=no-else-return",
+    "--disable=too-few-public-methods",
+    "--disable=cell-var-from-loop",
+    "--disable=global-statement"
+  ]
+}
